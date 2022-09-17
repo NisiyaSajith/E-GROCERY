@@ -1,0 +1,2 @@
+# E-GROCERY
+Django project
