@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section  style="background:rosybrown" class="min-vh-100" id="signup">
+    <div class="container h-100">
+        <div class="row">
+            
+                <h2 style="text-align:center;">Sign Up</h2>
+                <div class="hr"></div>
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div style="width:auto; height:700px;" class="signup">
+                    <div class="signup-body">
+                        <form action="" method="post">
+                            {% csrf_token %} {{form.as_p}}
+                            <button style=" width:150px; height:40px;  position: absolute;
+                            top: 100%; left:45%"
+                             type="submit" class="btn btn-success">Signup</button>
+                         </form>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+</section>
+{% endblock %} 

@@ -1,0 +1,102 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="banner">
+  <!-- <img src="{% static 'images/banner2.jpeg' %}" alt="" height="500px" width="50%"/> -->
+  <!-- </div> -->
+  <!-- <div class="col"></div> -->
+  <div style="position: relative; left: 400px; top: 80px; font-size: 30px">
+    <ul>
+      <li>
+        <i
+          >Carrymore is one of the most trusted online e-grocery web application
+          .</i
+        >
+      </li>
+      <li><i>More and get all your products at low prices.</i></li>
+
+      <li>
+        <i
+          >More secure payments with assured quality.Get your product delivered
+          on time.</i
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+
+<h2 style="text-align: center; font-size: 40px">
+  <b
+    ><i><u>OUR TEAM</u></i></b
+  >
+</h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-sm-auto"> 
+      <div class="card">
+        <div class="card-image loading">
+          <img src="{% static 'images/prof1.jpeg' %}" alt="" />
+        </div>
+        <div class="card-info">
+          <h3 class="card-title loading">
+            <span>Yash <span class="yellow-surname">Falke</span></span>
+          </h3>
+          <p class="card-description loading">
+            <span class="personal-info">
+              <span class="info">Graphic Designing Head</span> <br />
+              Pursuing IT Engineering (VIT Mumbai) <br />
+              Email:
+              <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-auto"> 
+      <div class="card">
+        <div class="card-image loading">
+          <img src="{% static 'images/prof2.jpeg' %}" alt="" />
+        </div>
+        <div class="card-info">
+          <h3 class="card-title loading">
+            <span>Harsh <span class="yellow-surname">Sunwani</span></span>
+          </h3>
+          <p class="card-description loading">
+            <span class="personal-info">
+              <span class="info">Web Developing Head</span> <br />
+              Pursuing IT Engineering (VIT Mumbai) <br />
+              Email:
+              <a href="mailto:'harshsunwani11@gmail.com'"
+                >harshsunwani11@gmail.com</a
+              >
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-auto"> 
+      <div class="card">
+        <div class="card-image loading">
+          <img src="{% static 'images/prof4.jpeg' %}" alt="" />
+        </div>
+        <div class="card-info">
+          <h3 class="card-title loading">
+            <span>Nikhil <span class="yellow-surname">Jaiswal</span></span>
+          </h3>
+          <p class="card-description loading">
+            <span class="personal-info">
+              <span class="info">Marketing and Publicity Head</span> <br />
+              Pursuing IT Engineering (VIT Mumbai) <br />
+              Email:
+              <a href="mailto:'nikjaiswal21@gmail.com'"
+                >nikjaiswal21@gmail.com</a
+              >
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

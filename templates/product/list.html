@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% block content %}
+<section class="min-vh-100" id="products">
+  <div class="container h-100">
+    {% for product in products %}
+     
+        
+    <div class="row ">
+      <div class="col-lg-4 col-sm-auto"> 
+        <div style="  border-radius: 2px; box-shadow: 0 5px 25px rgb(1 1 1 / 10%);"  class="card shadow-sm" >
+        
+        
+            <img src="{{product.image.url}}" alt="..." class="card-imgs" />
+            <div class="card-body shadow-sm">
+              <h5 class="card-title fw-normal">{{product.name}}</h5>
+              <p class="card-text fw-normal">&#x20b9; {{product.price}}/- {{product.unit}}</p>
+              <p class="card-text">{{product.category}}</p>
+              <p class="card-text">{{product.available}}</p>
+          <!-- <p class="card-text">{{product.unit}}</p> -->
+            
+              <ul style="display:table;">
+              {% if product.user.is_superuser %}
+                <li style= "display:table-cell; text-align: left; padding-left: 1px; padding-inline:1px;" class="left">
+                  <a href="{%  url 'product:update' product.id %}" class="btn btn-info" style="height:40px; width:90px;  ">Update</a>
+                </li>
+                <li style="display:table-cell;text-align:left; padding-inline: 1px;;">
+                  <a href="{%  url 'product:detail' product.id %}" class="btn btn-danger" style="height:40px; width:90px;">Detail</a>
+                </li>
+              {% endif %} 
+                <li style=" display:table-cell; text-align:right; padding:1px;" class="right">
+                  <a href="{%  url 'product:delete' product.id %}" class="btn btn-success" style="height:40px; width:90px;">Delete</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      
+          
+        
+    
+              
+      {% empty %}
+      <div class="col-lg-4 col-sm-auto">
+        <div class="card shadow-sm">
+          <img src="{{product.image.url}}" alt="..." class="card-img-top" />
+      
+          <div class="card-body">
+            <h5 class="card-title">Nothing to show!</h5>
+            <p class="card-text">{{product.price}}</p>
+            <p class="card-text">{{product.stock}}</p>
+        
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      
+      </div> 
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

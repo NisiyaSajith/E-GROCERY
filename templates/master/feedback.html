@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Feedback</h1>
+<div class="container">
+    <div style=" text-align:center">
+        
+        <p>Leave us a message</p>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">Send Feedback</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<h1></h1>
